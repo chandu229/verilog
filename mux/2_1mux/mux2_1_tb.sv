@@ -10,6 +10,8 @@ module mux2_1_tb;
     .Y(Y)
   );
   initial begin
+    $dumpfile("mux2_1.vcd");
+    $dumpvars(0, mux2_1_tb);
     $display("I1 I2 S | Y");
     $monitor(" %b %b %b | %b",I1,I2,S,Y);
     I1=0; I2=0; S=0; #10;
